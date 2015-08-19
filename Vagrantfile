@@ -5,7 +5,7 @@ Vagrant.configure('2') do |config|
 
   # See https://vagrantcloud.com/livinginthepast for SmartOS boxes
   config.vm.box = 'livinginthepast/smartos-base64'
-  config.vm.synced_folder '.', '/vagrant', disabled: true
+  config.vm.synced_folder '.', '/vagrant', type: "rsync", disabled: false
   config.vm.communicator = 'smartos'
 
   config.ssh.insert_key = false
